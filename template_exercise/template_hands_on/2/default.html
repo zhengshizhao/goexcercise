@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{range .}}  <br>
+	Hotels in {{.Region}} of Carlifonia:  <br>
+	{{.Name}}: {{.Address }}, {{.City}}, CA{{.Zip}}  <br>
+{{end}}
+
+</body>
+</html>
