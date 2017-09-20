@@ -11,17 +11,17 @@
 
 package main
 
-import ( "fmt"
-          "math" 
-        )
-type square struct{
+import (
+	"fmt"
+	"math"
+)
+
+type square struct {
 	length float32
-	width float32
-
+	width  float32
 }
-type circle struct{
+type circle struct {
 	radius float32
-
 }
 type shape interface {
 	area() float32
@@ -31,15 +31,15 @@ func (s square) area() float32 {
 	return s.length * s.width
 }
 
-func (c circle) area() float32{
+func (c circle) area() float32 {
 	return math.Pi * c.radius * c.radius
 }
 func info(sh shape) {
 	fmt.Println(sh.area())
 }
 func main() {
-	square1 := square{3.5,5}
+	square1 := square{3.5, 5}
 	circle1 := circle{7.8}
-    info(square1)
-    info(circle1)
+	info(square1)
+	info(circle1)
 }
